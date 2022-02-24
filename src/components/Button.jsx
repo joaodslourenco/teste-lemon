@@ -4,7 +4,7 @@ export default function Button(props) {
   return (
     <Botao color={props.color} icon={props.icon} disabled={props.disabled}>
       {props.children}
-      {props.icon}
+      <Icon>{props.children ? props.icon : null}</Icon>
     </Botao>
   )
 }
@@ -17,9 +17,13 @@ const Botao = styled.button`
   height: inherit;
   width: inherit;
   font-size: 16px;
+  padding: 16px;
   align-items: center;
-  justify-content: ${props => (props.icon ? 'space-around' : 'center')};
-  color: ${props => (props.color == 'primary' ? '#fff' : '#000')};
+  justify-content: ${props => (props.icon ? 'space-between' : 'center')};
+  color: ${props =>
+    props.color == 'primary' || (props.color == 'secondary' && props.disabled)
+      ? '#fff'
+      : '#000'};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   background-color: ${props =>
     (props.color == 'primary' && props.disabled ? '#B7D0B6' : null) ||
@@ -40,4 +44,9 @@ const Botao = styled.button`
       (props.color == 'primary' && '#013C00') ||
       (props.color == 'secondary' && '#DCAC0D')};
   }
+`
+
+const Icon = styled.i`
+  height: 18px;
+  width: 18px; ;
 `

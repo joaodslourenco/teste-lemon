@@ -8,9 +8,11 @@ export default function Homepage() {
       <p>
         Bem vindo à minha resolução do teste técnico da empresa Lemon Energia!
       </p>
+      {/* Container voltado para a demonstração da adaptação do tamanho do componente Button */}
       <Container>
-        <Button color="primary" icon={arrowRight}>
-          Botão é esse
+        {/* O componente Button pode receber três props: color('primary','secondary'); icon(arrowRight, check, refresh); disabled(boolean) */}
+        <Button color="primary" icon={refresh}>
+          Text
         </Button>
       </Container>
     </Background>
@@ -28,6 +30,6 @@ const Background = styled.div`
 `
 /* hipótese em que o componente Button é inserido em uma div com tamanho maior*/
 const Container = styled.div`
-  /* width: 700px;
-  height: 300px; */
+  /* width: 450px;
+  height: 150px; */
 `
