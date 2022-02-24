@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Button from './Button'
+import { arrowRight, check, refresh } from '../icons'
 
 export default function Homepage() {
   return (
@@ -8,7 +9,9 @@ export default function Homepage() {
         Bem vindo à minha resolução do teste técnico da empresa Lemon Energia!
       </p>
       <Container>
-        <Button color="secondary">Botão é esse</Button>
+        <Button color="primary" icon={arrowRight}>
+          Botão é esse
+        </Button>
       </Container>
     </Background>
   )
@@ -23,7 +26,7 @@ const Background = styled.div`
   align-items: center;
   color: #fff;
 `
-
+/* hipótese em que o componente Button é inserido em uma div com tamanho maior*/
 const Container = styled.div`
   /* width: 700px;
   height: 300px; */
