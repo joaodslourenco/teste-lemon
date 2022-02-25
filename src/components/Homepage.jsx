@@ -47,15 +47,17 @@ export default function Homepage() {
           iconSelected={iconSelectionHandler}
           disableSelected={disableSelectionHandler}
         />
-        <ButtonText>
+        <ButtonInput>
+          <label htmlFor="button-text">Insira o texto do botão:</label>
           <input
             type="text"
+            id="button-text"
             value={buttonText}
             onChange={e => setButtonText(e.target.value)}
           />
-        </ButtonText>
-        <ButtonSize>
-          <label htmlFor="height">Altura</label>
+        </ButtonInput>
+        <ButtonInput>
+          <label htmlFor="height">Altura:</label>
           <input
             type="number"
             name="height"
@@ -64,7 +66,7 @@ export default function Homepage() {
             min={56}
             onChange={e => setHeight(e.target.value)}
           />
-          <label htmlFor="width">Largura</label>
+          <label htmlFor="width">Largura:</label>
           <input
             type="number"
             name="width"
@@ -73,7 +75,7 @@ export default function Homepage() {
             value={width}
             onChange={e => setWidth(e.target.value)}
           />
-        </ButtonSize>
+        </ButtonInput>
         {/* Container voltado para a demonstração da adaptação do tamanho do componente Button */}
         <Container height={height} width={width}>
           {/* O componente Button pode receber três props: color('primary','secondary'); icon(arrowRight, refresh, check); disabled(boolean) */}
@@ -98,14 +100,16 @@ const Background = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-
   color: #fff;
 `
 
 const Title = styled.h1`
-  position: absolute;
-  margin: 0 20px 0;
-  top: 50px;
+  margin: 0 40px 25px;
+
+  @media (max-width: 768px) {
+    margin: 0 25px 10px;
+    font-size: 18px;
+  }
 `
 
 const Content = styled.div`
@@ -115,10 +119,17 @@ const Content = styled.div`
   background-color: #b5b5b5;
   padding: 35px;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    flex-shrink: 1;
+  }
 `
-const ButtonText = styled.div`
+const ButtonInput = styled.div`
   margin-bottom: 25px;
-`
-const ButtonSize = styled.div`
-  margin-bottom: 25px;
+  display: flex;
+  gap: 5px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `

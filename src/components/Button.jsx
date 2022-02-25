@@ -23,9 +23,11 @@ const Botao = styled.button`
   height: inherit;
   width: inherit;
   font-size: 16px;
+  text-align: center;
   padding: 16px;
   align-items: center;
   cursor: pointer;
+  transition: all 150ms;
   visibility: ${props => (props.children ? 'visible' : 'hidden')};
   justify-content: ${props => (props.icon ? 'space-between' : 'center')};
   color: ${props => (props.color == 'primary' ? '#fff' : '#000')};
