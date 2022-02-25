@@ -52,7 +52,7 @@ export default function PropsSelection(props) {
           type="radio"
           id="arrow-right"
           name="icon"
-          value="arrowRight"
+          value="arrow-right"
           onClick={e => onIconSelection(e.target.value)}
         />
         <label htmlFor="arrow-right">arrow-right</label>

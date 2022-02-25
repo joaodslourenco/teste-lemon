@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Button from './Button'
-import { arrowRight, refresh, check } from '../icons'
 import { useState } from 'react'
 import PropsSelection from './PropsSelection'
 import Container from './Container'
@@ -18,18 +17,7 @@ export default function Homepage() {
   }
 
   function iconSelectionHandler(icon) {
-    const iconHandler = icon => {
-      if (icon === 'arrowRight') {
-        return arrowRight
-      }
-      if (icon === 'refresh') {
-        return refresh
-      }
-      if (icon === 'check') {
-        return check
-      }
-    }
-    setSelectedIcon(iconHandler(icon))
+    setSelectedIcon(icon)
   }
 
   function disableSelectionHandler(disableToggle) {

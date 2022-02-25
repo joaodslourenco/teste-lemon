@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export default function TestRequirements() {
   return (
     <Container>
-      <Title>Quesitos do teste</Title>
+      <Title>Requisitos do teste</Title>
       <Text>
         O teste consiste na criação do componente Button, que irá compor a
         biblioteca de UI da empresa Lemon Energia.
@@ -52,6 +52,10 @@ export default function TestRequirements() {
           da prop disabled.
         </li>
       </List>
+      <TaskListIcon
+        src="https://www.pngitem.com/pimgs/m/571-5717473_to-do-list-checklist-clipart-hd-png-download.png"
+        alt=""
+      />
     </Container>
   )
 }
@@ -63,6 +67,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  position: relative;
 `
 const Title = styled.h1`
   margin-bottom: 20px;
@@ -78,4 +83,14 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 3px;
+`
+const TaskListIcon = styled.img`
+  position: absolute;
+  right: 80px;
+  top: 60px;
+  height: 250px;
+
+  @media (max-width: 1240px) {
+    visibility: hidden;
+  }
 `
