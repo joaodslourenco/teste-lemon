@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export default function Button(props) {
   const iconSelected = icon => {
+    if (icon === 'none') {
+      return null
+    }
     if (icon === 'arrow-right') {
       return arrowRight
     }
@@ -42,7 +45,8 @@ const Botao = styled.button`
   cursor: pointer;
   transition: all 150ms;
   visibility: ${props => (props.children ? 'visible' : 'hidden')};
-  justify-content: ${props => (props.icon ? 'space-between' : 'center')};
+  justify-content: ${props =>
+    props.icon && props.icon !== 'none' ? 'space-between' : 'center'};
   color: ${props => (props.color == 'primary' ? '#fff' : '#000')};
   background-color: ${props =>
     (props.color == 'primary' && '#026C00') ||

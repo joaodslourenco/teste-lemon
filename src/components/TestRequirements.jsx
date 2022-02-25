@@ -6,7 +6,12 @@ export default function TestRequirements() {
       <Title>Requisitos do teste</Title>
       <Text>
         O teste consiste na criação do componente Button, que irá compor a
-        biblioteca de UI da empresa Lemon Energia.
+        biblioteca de UI da empresa Lemon Energia. As orientações acerca da
+        estilização referente às props e Estados podem ser encontradas através
+        do seguinte{' '}
+        <a href="https://www.figma.com/file/voCavm7qKW13vTfdDxinIX/Lemon---Teste-Frontend---Button?node-id=0%3A1">
+          link.
+        </a>
       </Text>
       <Text>
         Para a presente solução, foram utilizadas as bibliotecas React,
@@ -54,8 +59,12 @@ export default function TestRequirements() {
       </List>
       <TaskListIcon
         src="https://www.pngitem.com/pimgs/m/571-5717473_to-do-list-checklist-clipart-hd-png-download.png"
-        alt=""
+        alt="task-list"
       />
+      <br />
+      <Text>
+        O cumprimento dos requisitos do teste pode ser aferido na página acima.
+      </Text>
     </Container>
   )
 }
@@ -77,6 +86,8 @@ const SubTitle = styled.h2`
 `
 const Text = styled.p`
   margin-bottom: 15px;
+  max-width: 70vw;
+  line-height: 1.5;
 `
 
 const List = styled.ul`

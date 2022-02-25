@@ -1,13 +1,13 @@
 import Homepage from './components/Homepage'
 import TestRequirements from './components/TestRequirements'
-import VisualRequirements from './components/VisualRequirements'
+import CodeDemonstration from './components/CodeDemonstration'
 
 function App() {
   return (
     <div>
       <Homepage />
       <TestRequirements />
-      <VisualRequirements />
+      <CodeDemonstration />
     </div>
   )
 }
