@@ -3,30 +3,33 @@ import Button from './Button'
 import { arrowRight, refresh, check } from '../icons'
 import { useState } from 'react'
 import PropsSelection from './PropsSelection'
+import Container from './Container'
 
 export default function Homepage() {
   const [selectedColor, setSelectedColor] = useState('primary')
   const [selectedIcon, setSelectedIcon] = useState(null)
   const [isDisabled, setIsDisabled] = useState(false)
   const [buttonText, setButtonText] = useState('Text')
+  const [height, setHeight] = useState(56)
+  const [width, setWidth] = useState(311)
 
   function colorSelectionHandler(color) {
     setSelectedColor(color)
   }
 
   function iconSelectionHandler(icon) {
-    const selectedIcon = icon => {
-      if (icon == 'arrowRight') {
+    const iconHandler = icon => {
+      if (icon === 'arrowRight') {
         return arrowRight
       }
-      if (icon == 'refresh') {
+      if (icon === 'refresh') {
         return refresh
       }
-      if (icon == 'check') {
+      if (icon === 'check') {
         return check
       }
     }
-    setSelectedIcon(selectedIcon(icon))
+    setSelectedIcon(iconHandler(icon))
   }
 
   function disableSelectionHandler(disableToggle) {
@@ -51,8 +54,28 @@ export default function Homepage() {
             onChange={e => setButtonText(e.target.value)}
           />
         </ButtonText>
+        <ButtonSize>
+          <label htmlFor="height">Altura</label>
+          <input
+            type="number"
+            name="height"
+            id="height"
+            value={height}
+            min={56}
+            onChange={e => setHeight(e.target.value)}
+          />
+          <label htmlFor="width">Largura</label>
+          <input
+            type="number"
+            name="width"
+            id="width"
+            min={316}
+            value={width}
+            onChange={e => setWidth(e.target.value)}
+          />
+        </ButtonSize>
         {/* Container voltado para a demonstração da adaptação do tamanho do componente Button */}
-        <Container>
+        <Container height={height} width={width}>
           {/* O componente Button pode receber três props: color('primary','secondary'); icon(arrowRight, refresh, check); disabled(boolean) */}
           <Button
             color={selectedColor}
@@ -96,9 +119,6 @@ const Content = styled.div`
 const ButtonText = styled.div`
   margin-bottom: 25px;
 `
-
-/* hipótese em que o componente Button é inserido em uma div com tamanho maior*/
-const Container = styled.div`
-  /* width: 450px;
-  height: 150px; */
+const ButtonSize = styled.div`
+  margin-bottom: 25px;
 `

@@ -105,5 +105,6 @@ const PropsSelector = styled.div`
 `
 
 const Text = styled.p`
-  margin-bottom: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
 `
