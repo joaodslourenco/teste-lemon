@@ -64,6 +64,7 @@ export default function Homepage() {
             id="height"
             value={height}
             min={56}
+            step={2}
             onChange={e => setHeight(e.target.value)}
           />
           <label htmlFor="width">Largura:</label>
@@ -72,6 +73,7 @@ export default function Homepage() {
             name="width"
             id="width"
             min={316}
+            step={2}
             value={width}
             onChange={e => setWidth(e.target.value)}
           />
@@ -83,6 +85,7 @@ export default function Homepage() {
             color={selectedColor}
             icon={selectedIcon}
             disabled={isDisabled}
+            onClick={null}
           >
             {buttonText}
           </Button>

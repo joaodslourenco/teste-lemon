@@ -7,6 +7,7 @@ export default function Button(props) {
       icon={props.icon}
       disabled={props.disabled || !props.children}
       children={props.children}
+      onClick={props.onClick}
     >
       {props.children}
       {!props.children && 'Não é possível criar um botão sem texto!'}
