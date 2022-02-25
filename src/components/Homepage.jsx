@@ -1,13 +1,37 @@
 import styled from 'styled-components'
 import Button from './Button'
-import { arrowRight, check, refresh } from '../icons'
+import { arrowRight, refresh, check } from '../icons'
 import { useState } from 'react'
 import PropsSelection from './PropsSelection'
 
 export default function Homepage() {
   const [selectedColor, setSelectedColor] = useState('primary')
-  const [selectedIcon, setSelectedIcon] = useState(false)
+  const [selectedIcon, setSelectedIcon] = useState(null)
   const [isDisabled, setIsDisabled] = useState(false)
+  const [buttonText, setButtonText] = useState('Text')
+
+  function colorSelectionHandler(color) {
+    setSelectedColor(color)
+  }
+
+  function iconSelectionHandler(icon) {
+    const selectedIcon = icon => {
+      if (icon == 'arrowRight') {
+        return arrowRight
+      }
+      if (icon == 'refresh') {
+        return refresh
+      }
+      if (icon == 'check') {
+        return check
+      }
+    }
+    setSelectedIcon(selectedIcon(icon))
+  }
+
+  function disableSelectionHandler(disableToggle) {
+    setIsDisabled(disableToggle)
+  }
 
   return (
     <Background>
@@ -15,7 +39,18 @@ export default function Homepage() {
         Bem vindo à minha resolução do teste técnico da empresa Lemon Energia!
       </Title>
       <Content>
-        <PropsSelection />
+        <PropsSelection
+          colorSelected={colorSelectionHandler}
+          iconSelected={iconSelectionHandler}
+          disableSelected={disableSelectionHandler}
+        />
+        <ButtonText>
+          <input
+            type="text"
+            value={buttonText}
+            onChange={e => setButtonText(e.target.value)}
+          />
+        </ButtonText>
         {/* Container voltado para a demonstração da adaptação do tamanho do componente Button */}
         <Container>
           {/* O componente Button pode receber três props: color('primary','secondary'); icon(arrowRight, refresh, check); disabled(boolean) */}
@@ -24,7 +59,7 @@ export default function Homepage() {
             icon={selectedIcon}
             disabled={isDisabled}
           >
-            Text
+            {buttonText}
           </Button>
         </Container>
       </Content>
@@ -57,6 +92,9 @@ const Content = styled.div`
   background-color: #b5b5b5;
   padding: 35px;
   border-radius: 10px;
+`
+const ButtonText = styled.div`
+  margin-bottom: 25px;
 `
 
 /* hipótese em que o componente Button é inserido em uma div com tamanho maior*/
