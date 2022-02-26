@@ -70,8 +70,9 @@ export default function TestRequirements() {
 }
 
 const Container = styled.div`
+  background-color: #f7f7f7;
   height: 100vh;
-  padding: 50px;
+  padding: 45px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
