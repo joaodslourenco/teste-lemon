@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import Button from './Button'
+import Button from '../Button'
 import { useState } from 'react'
-import PropsSelection from './PropsSelection'
-import Container from './Container'
+import PropsSelection from '../PropsSelection'
+import Container from '../Container'
 
 export default function Homepage() {
   const [selectedColor, setSelectedColor] = useState('primary')

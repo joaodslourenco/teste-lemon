@@ -1,8 +1,9 @@
-import Homepage from './components/Homepage'
-import TestRequirements from './components/TestRequirements'
-import CodeDemonstration from './components/CodeDemonstration'
-import StylingDemonstration from './components/StylingDemonstration'
+import Homepage from './components/pages/Homepage'
+import TestRequirements from './components/pages/TestRequirements'
+import CodeDemonstration from './components/pages/CodeDemonstration'
+import StylingDemonstration from './components/pages/StylingDemonstration'
 import styled from 'styled-components'
+import Contact from './components/pages/Contact'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <TestRequirements />
       <CodeDemonstration />
       <StylingDemonstration />
+      <Contact />
     </div>
   )
 }
