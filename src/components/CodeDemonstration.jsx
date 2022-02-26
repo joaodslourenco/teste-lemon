@@ -17,36 +17,41 @@ export default function CodeDemonstration() {
         <br />
         <ul>
           <li>
-            Color: recebe a cor indicada no componente pai e, quando não
-            indicada, recebe 'primary' por padrão.
+            <code>Color</code>: recebe a cor indicada no componente pai e,
+            quando não indicada, recebe 'primary' por padrão.
           </li>
           <li>
-            Icon: recebe o ícone indicado no componente pai, quando houver.
+            <code>Icon</code>: recebe o ícone indicado no componente pai, quando
+            houver.
           </li>
           <li>
-            Disabled (boolean): sendo um boolean, somente é ativada quando
-            declarada. Também é ativada quando o botão não tiver conteúdo
+            <code>Disabled</code> (boolean): sendo um boolean, somente é ativada
+            quando declarada. Também é ativada quando o botão não tiver conteúdo
             (!props.children)
           </li>
           <li>
-            onClick (function): recebe uma função através do componente pai.
+            <code>onClick</code> (function): recebe uma função através do
+            componente pai.
           </li>
         </ul>
         <br />
         <Text>
-          Button recebe o conteúdo de texto através do props.children. Caso não
-          receba texto, o componente retornará uma mensagem de erro.
-          (props.children && "Não é possível criar um botão sem texto"). Observe
-          que o operador && faz a verificação se o primeiro argumento é true e,
-          em caso positivo, retorna a string que informa o erro.
+          Button recebe o conteúdo de texto através do{' '}
+          <code>props.children</code>. Caso não receba texto, o componente
+          retornará uma mensagem de erro. (<code>props.children &&</code> "Não é
+          possível criar um botão sem texto"). Observe que o operador{' '}
+          <code>&&</code> faz a verificação se o primeiro argumento é{' '}
+          <code>true</code> e, em caso positivo, retorna a string que informa o
+          erro.
         </Text>
         <br />
         <Text>
-          Dentro do componente Button existe um ícone (elemento HTML 'i') que,
-          através de um operador ternário, verifica a existência de conteúdo no
-          componente Button. Em caso positivo, é acionada a função iconSelected,
-          passando a string do ícone selecionado, que retorna uma variável que
-          armazena o SVG do ícone solicitado.
+          Dentro do componente Button existe um ícone (elemento HTML{' '}
+          <code>i</code>) que, através de um operador ternário, verifica a
+          existência de conteúdo no componente Button. Em caso positivo, é
+          acionada a função <code>iconSelected</code>, passando a string do
+          ícone selecionado, que retorna uma variável que armazena o SVG do
+          ícone solicitado.
         </Text>
       </div>
     </Container>
@@ -55,32 +60,24 @@ export default function CodeDemonstration() {
 
 const Container = styled.div`
   height: 100vh;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
   background-color: #594544;
   color: #fff;
   padding: 42px;
   position: relative;
+  gap: 30px;
 `
 
 const Title = styled.h1`
-  /* position: absolute;
-  top: 45px;
-  right: 60px;
-  width: 600px; */
-
-  @media (min-width: 1368px) {
-    width: 50%;
-  }
+  width: 100%;
+  padding-bottom: 30px;
 `
 
 const ButtonCode = styled.img`
-  height: 100%;
-  /* height: 80%;
-
-  @media (min-width: 768px) {
-    height: 100%;
-  } */
+  display: flex;
+  @media (max-width: 1300px) {
+    display: none;
+  }
 `
 
 const Text = styled.p`
