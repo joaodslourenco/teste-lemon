@@ -47,29 +47,29 @@ const Botao = styled.button`
   visibility: ${props => (props.children ? 'visible' : 'hidden')};
   justify-content: ${props =>
     props.icon && props.icon !== 'none' ? 'space-between' : 'center'};
-  color: ${props => (props.color == 'primary' ? '#fff' : '#000')};
+  color: ${props => (props.color === 'primary' ? '#fff' : '#000')};
   background-color: ${props =>
-    (props.color == 'primary' && '#026C00') ||
-    (props.color == 'secondary' && '#F7C346')};
+    (props.color === 'primary' && '#026C00') ||
+    (props.color === 'secondary' && '#F7C346')};
 
   &:hover {
     background-color: ${props =>
-      (props.color == 'primary' && '#079504') ||
-      (props.color == 'secondary' && '#FFDF77')};
+      (props.color === 'primary' && '#079504') ||
+      (props.color === 'secondary' && '#FFDF77')};
   }
 
   &:active {
     background-color: ${props =>
-      (props.color == 'primary' && '#013C00') ||
-      (props.color == 'secondary' && '#DCAC0D')};
+      (props.color === 'primary' && '#013C00') ||
+      (props.color === 'secondary' && '#DCAC0D')};
   }
 
   &:disabled {
     cursor: not-allowed;
     background-color: ${props =>
-      (props.color == 'primary' && '#B7D0B6') ||
-      (props.color == 'secondary' && '#FFE58D')};
-    color: ${props => props.color == 'secondary' && '#fff'};
+      (props.color === 'primary' && '#B7D0B6') ||
+      (props.color === 'secondary' && '#FFE58D')};
+    color: ${props => props.color === 'secondary' && '#fff'};
   }
 `
 
