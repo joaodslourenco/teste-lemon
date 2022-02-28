@@ -18,8 +18,8 @@ export default function StylingDemonstration() {
         através dos <code> min-width</code> e <code> min-height</code>,
         respeitando a orientação do teste. Além disso, foram adicionados
         <code>height: inherit</code> e <code>width: inherit</code>, para que o
-        tamanho do Button seja alterado conforme seja inserido em um container
-        de tamanho maior.
+        tamanho do Button seja alterado conforme o tamanho do container em que
+        estiver inserido.
       </Text>
       <Text>
         O posicionamento do texto e ícone foi definido através do
@@ -32,7 +32,7 @@ export default function StylingDemonstration() {
       </Text>
       <Text>
         A cor do texto é definida com base na <code>props.color</code>, sendo
-        que quando <code>primary</code>, a cor é branca e quando diferente de
+        que, quando <code>primary</code>, a cor é branca e quando diferente de
         <code>primary</code>, a cor é preta.
       </Text>
       <Text>

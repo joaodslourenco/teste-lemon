@@ -74,8 +74,8 @@ const Botao = styled.button`
 `
 
 const Icon = styled.i`
-  min-height: 18px;
-  min-width: 18px;
+  height: 18px;
+  width: 18px;
   margin-left: ${props => props.icon && '16px'};
 `
 

@@ -10,12 +10,13 @@ export default function TestRequirements() {
         estilização referente às props e Estados podem ser encontradas através
         do seguinte{' '}
         <a href="https://www.figma.com/file/voCavm7qKW13vTfdDxinIX/Lemon---Teste-Frontend---Button?node-id=0%3A1">
-          link.
+          link
         </a>
+        .
       </Text>
       <Text>
         Para a presente solução, foram utilizadas as bibliotecas React,
-        React-DOM e Styled-Components
+        React-DOM e Styled-Components.
       </Text>
       <SubTitle>Tarefa</SubTitle>
       <Text>
