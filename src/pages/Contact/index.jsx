@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import { ContactBox, Container, ProfilePic } from './styles'
 
 export default function Contact() {
   return (
     <Container>
       <h1>Obrigado pela atenção!</h1>
-      <Box>
+      <ContactBox>
         <ProfilePic
           src="https://avatars.githubusercontent.com/u/90736469?v=4"
           alt=""
@@ -25,29 +25,7 @@ export default function Contact() {
             </a>
           </p>
         </div>
-      </Box>
+      </ContactBox>
     </Container>
   )
 }
-
-const Container = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #594544;
-  color: #fff;
-`
-
-const ProfilePic = styled.img`
-  height: 250px;
-  border-radius: 100%;
-`
-
-const Box = styled.div`
-  display: flex;
-  padding: 50px;
-  gap: 30px;
-  align-items: center;
-`

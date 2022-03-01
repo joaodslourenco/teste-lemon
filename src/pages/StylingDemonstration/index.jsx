@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { Code, Container, Text } from './styles'
 
 export default function StylingDemonstration() {
   return (
@@ -55,24 +55,3 @@ export default function StylingDemonstration() {
     </Container>
   )
 }
-
-const Container = styled.div`
-  background-color: #f7f7f7;
-  height: 110vh;
-  padding: 45px;
-`
-
-const Code = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 55vh;
-
-  @media (max-width: 1280px) {
-    display: none;
-  }
-`
-const Text = styled.p`
-  line-height: 1.5;
-  text-align: justify;
-  padding: 10px 25px 0;
-`

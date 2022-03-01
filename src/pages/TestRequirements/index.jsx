@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { Container, List, SubTitle, TaskListIcon, Text, Title } from './styles'
 
 export default function TestRequirements() {
   return (
@@ -58,10 +58,7 @@ export default function TestRequirements() {
           da prop disabled.
         </li>
       </List>
-      <TaskListIcon
-        src="https://www.pngitem.com/pimgs/m/571-5717473_to-do-list-checklist-clipart-hd-png-download.png"
-        alt="task-list"
-      />
+      <TaskListIcon src="images/task-list.png" alt="task-list" />
       <br />
       <Text>
         O cumprimento dos requisitos do teste pode ser aferido na página acima.
@@ -69,41 +66,3 @@ export default function TestRequirements() {
     </Container>
   )
 }
-
-const Container = styled.div`
-  background-color: #f7f7f7;
-  height: 100vh;
-  padding: 45px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-`
-const Title = styled.h1`
-  margin-bottom: 20px;
-`
-const SubTitle = styled.h2`
-  margin-bottom: 15px;
-`
-const Text = styled.p`
-  margin-bottom: 15px;
-  max-width: 70vw;
-  line-height: 1.5;
-`
-
-const List = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-`
-const TaskListIcon = styled.img`
-  position: absolute;
-  right: 80px;
-  top: 60px;
-  height: 250px;
-
-  @media (max-width: 1240px) {
-    visibility: hidden;
-  }
-`
