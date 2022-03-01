@@ -3,13 +3,9 @@ import styled from 'styled-components'
 export default function CodeDemonstration() {
   return (
     <Container>
-      <ButtonCode
-        src="https://i.ibb.co/MBWhyy9/button-component.png"
-        alt="button"
-      />
+      <ButtonCode src="/images/code-demonstration.jpg" alt="button" />
       <div>
         <Title>Demonstração do código do componente Button</Title>
-        {/*usar display grid */}
         <br />
         <Text>
           Conforme os requisitos, o componente Button recebe as seguintes props:
@@ -26,8 +22,7 @@ export default function CodeDemonstration() {
           </li>
           <li>
             <code>Disabled</code> (boolean): sendo um boolean, somente é ativada
-            quando declarada. Também é ativada quando o botão não tiver conteúdo
-            (!props.children)
+            quando declarada.
           </li>
           <li>
             <code>onClick</code> (function): recebe uma função através do
@@ -38,20 +33,15 @@ export default function CodeDemonstration() {
         <Text>
           Button recebe o conteúdo de texto através do{' '}
           <code>props.children</code>. Caso não receba texto, o componente
-          retornará uma mensagem de erro. (<code>props.children &&</code> "Não é
-          possível criar um botão sem texto"). Observe que o operador{' '}
-          <code>&&</code> faz a verificação se o primeiro argumento é{' '}
-          <code>true</code> e, em caso positivo, retorna a string que informa o
-          erro.
+          retorna <code>null</code>, deixando de ser exibido.
         </Text>
         <br />
         <Text>
           Dentro do componente Button existe um ícone (elemento HTML{' '}
           <code>i</code>) que, através de um operador ternário, verifica a
           existência de conteúdo no componente Button. Em caso positivo, é
-          acionada a função <code>iconSelected</code>, passando a string do
-          ícone selecionado, que retorna uma variável que armazena o SVG do
-          ícone solicitado.
+          acessado o Objeto <code>iconSelected</code> que, a partir da string
+          declarada, retorna a variável que armazena o SVG do ícone solicitado.
         </Text>
       </div>
     </Container>
@@ -74,7 +64,6 @@ const Title = styled.h1`
 `
 
 const ButtonCode = styled.img`
-  display: flex;
   @media (max-width: 1300px) {
     display: none;
   }

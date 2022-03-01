@@ -16,7 +16,7 @@ export default function Button(props) {
     <Botao
       color={props.color || 'primary'}
       icon={props.icon}
-      disabled={props.disabled || !props.children}
+      disabled={props.disabled}
       children={props.children}
       onClick={props.onClick}
     >

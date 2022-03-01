@@ -4,8 +4,14 @@ export default function StylingDemonstration() {
   return (
     <Container>
       <Code>
-        <img src="https://i.ibb.co/F6x0hBr/styling-component.png" alt="" />
-        <img src="https://i.ibb.co/zRD9cJ2/styling-states.png" alt="" />
+        <img
+          src="/images/styling-demonstration-1.jpg"
+          alt="styling-demonstration-1"
+        />
+        <img
+          src="/images/styling-demonstration-2.jpg"
+          alt="styling-demonstration-2"
+        />
       </Code>
       <Text>
         A estilização do componente é realizada através da biblioteca
@@ -16,13 +22,13 @@ export default function StylingDemonstration() {
       <Text>
         Para controlar o tamanho do Button, foi definido um tamanho mínimo,
         através dos <code> min-width</code> e <code> min-height</code>,
-        respeitando a orientação do teste. Além disso, foram adicionados
+        respeitando a orientação do teste. Além disso, foram adicionados{' '}
         <code>height: inherit</code> e <code>width: inherit</code>, para que o
         tamanho do Button seja alterado conforme o tamanho do container em que
         estiver inserido.
       </Text>
       <Text>
-        O posicionamento do texto e ícone foi definido através do
+        O posicionamento do texto e ícone foi definido através do{' '}
         <code>justify-content</code> que, utilizando um operador ternário,
         verifica se o componente Button recebeu um ícone e se esse ícone é
         diferente de <code>none</code>. Quando a verificação retornar{' '}
@@ -33,7 +39,9 @@ export default function StylingDemonstration() {
       <Text>
         A cor do texto é definida com base na <code>props.color</code>, sendo
         que, quando <code>primary</code>, a cor é branca e quando diferente de
-        <code>primary</code>, a cor é preta.
+        <code>primary</code>, a cor é preta. Observe que, quando presentes{' '}
+        <code>props.color: secondary</code> e <code>disabled</code>, a{' '}
+        <code>color</code> passa a ser branca, conforme demonstrado no Figma.
       </Text>
       <Text>
         A cor de fundo do botão é definida através de verificação. Se{' '}
