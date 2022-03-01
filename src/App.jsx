@@ -1,8 +1,8 @@
-import Homepage from './components/pages/Homepage'
-import TestRequirements from './components/pages/TestRequirements'
-import CodeDemonstration from './components/pages/CodeDemonstration'
-import StylingDemonstration from './components/pages/StylingDemonstration'
-import Contact from './components/pages/Contact'
+import Homepage from './pages/Homepage'
+import TestRequirements from './pages/TestRequirements'
+import CodeDemonstration from './pages/CodeDemonstration'
+import StylingDemonstration from './pages/StylingDemonstration'
+import Contact from './pages/Contact'
 
 function App() {
   return (

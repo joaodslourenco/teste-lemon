@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import { PropsGroup, PropsSelector, Text } from './styles'
 
 export default function PropsSelection(props) {
   function onColorSelection(color) {
@@ -87,24 +87,3 @@ export default function PropsSelection(props) {
     </PropsGroup>
   )
 }
-
-const PropsGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 25px;
-`
-const PropsSelector = styled.div`
-  display: flex;
-  align-content: center;
-  margin: 15px;
-  justify-content: center;
-
-  input {
-    margin: 5px;
-  }
-`
-
-const Text = styled.p`
-  font-weight: bold;
-  margin-bottom: 15px;
-`

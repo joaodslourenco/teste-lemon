@@ -1,37 +1,6 @@
 import styled from 'styled-components'
 
-export default function Button(props) {
-  const iconSelected = icon => {
-    if (icon === 'none') {
-      return null
-    }
-    if (icon === 'arrow-right') {
-      return arrowRight
-    }
-    if (icon === 'refresh') {
-      return refresh
-    }
-    if (icon === 'check') {
-      return check
-    }
-  }
-
-  return (
-    <Botao
-      color={props.color || 'primary'}
-      icon={props.icon}
-      disabled={props.disabled || !props.children}
-      children={props.children}
-      onClick={props.onClick}
-    >
-      {props.children}
-      {!props.children && 'Não é possível criar um botão sem texto!'}
-      <Icon>{props.children ? iconSelected(props.icon) : null}</Icon>
-    </Botao>
-  )
-}
-
-const Botao = styled.button`
+export const Botao = styled.button`
   display: flex;
   border: none;
   min-width: 311px;
@@ -44,7 +13,6 @@ const Botao = styled.button`
   align-items: center;
   cursor: pointer;
   transition: all 150ms;
-  visibility: ${props => (props.children ? 'visible' : 'hidden')};
   justify-content: ${props =>
     props.icon && props.icon !== 'none' ? 'space-between' : 'center'};
   color: ${props => (props.color === 'primary' ? '#fff' : '#000')};
@@ -73,13 +41,13 @@ const Botao = styled.button`
   }
 `
 
-const Icon = styled.i`
+export const Icon = styled.i`
   height: 18px;
   width: 18px;
   margin-left: ${props => props.icon && '16px'};
 `
 
-const arrowRight = (
+export const arrowRight = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-6 w-6"
@@ -96,7 +64,7 @@ const arrowRight = (
   </svg>
 )
 
-const check = (
+export const check = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-6 w-6"
@@ -113,7 +81,7 @@ const check = (
   </svg>
 )
 
-const refresh = (
+export const refresh = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-6 w-6"
