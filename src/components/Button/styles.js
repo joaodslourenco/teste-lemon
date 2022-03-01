@@ -57,6 +57,8 @@ export const arrowRight = (
     viewBox="0 0 24 24"
     stroke="currentColor"
   >
+    <title>arrow-right</title>
+
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -74,6 +76,7 @@ export const check = (
     viewBox="0 0 24 24"
     stroke="currentColor"
   >
+    <title>check</title>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -91,6 +94,7 @@ export const refresh = (
     viewBox="0 0 24 24"
     stroke="currentColor"
   >
+    <title>refresh</title>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"

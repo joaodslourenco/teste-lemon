@@ -27,6 +27,12 @@ You can start the development server by running:
 
 #### `npm start`
 
+## 🪲🔍 Running tests
+
+I have developed unitary tests for the Button component. You may run them with:
+
+#### `npm test`
+
 <br>
 
 # How to use Button component
